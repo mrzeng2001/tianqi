@@ -1,0 +1,35 @@
+{
+    "usingComponents": {
+        "ec-canvas": "/components/ec-canvas/ec-canvas"
+    },
+    "pages": [
+        "pages/home/home",
+        "pages/mine/mine"
+    ],
+    "window": {
+        "navigationBarTitleText": "Haowen养基场",
+        "navigationBarBackgroundColor": "#C5381D",
+        "enablePullDownRefresh": false,
+        "backgroundColor": "#00FFFF",
+        "backgroundTextStyle": "dark"
+    },
+    "style": "v2",
+    "tabBar": {
+        "selectedColor": "#b4282d",
+        "position": "bottom",
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "images/home.png",
+                "selectedIconPath": "images/home_selected.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "持仓",
+                "iconPath": "images/stock.png",
+                "selectedIconPath": "images/stock_selected.png"
+            }
+        ]
+    }
+}

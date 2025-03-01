@@ -1,0 +1,21 @@
+<!--home.wxml-->
+<view class="container">
+  <!-- 基金净值走势图 -->
+    <view class="chart-container">
+        <ec-canvas id="fundChart" canvas-id="fundChartCanvas" ec="{{ ec }}">
+        </ec-canvas>
+    </view>
+
+  <!-- 数据列表 -->
+  <view class="data-list">
+    <block wx:for="{{dataList}}" wx:key="index">
+        <view class="data-item">
+        <view><text>日期: {{item.date}}</text></view>
+        <view><text>净值: {{item.net_value}}</text></view>
+        <view><text>份额: {{item.shares}}</text></view>
+        <view><text>总金额: {{item.total_amount}}</text></view>
+        </view>
+    </block>
+  </view>
+</view>
+

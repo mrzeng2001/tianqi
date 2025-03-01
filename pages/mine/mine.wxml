@@ -1,0 +1,26 @@
+<view class="container">
+  <!-- 饼状图 -->
+  <view class="chart-container">
+    <ec-canvas id="holdingsChart" canvas-id="holdingsChartCanvas" ec="{{ ec }}"></ec-canvas>
+  </view>
+
+  <!-- 图例 -->
+  <view class="legend">
+    <block wx:for="{{holdings}}" wx:key="fund_name">
+      <view class="legend-item">
+        <view class="legend-color" style="background-color: {{item.color}};"></view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 持仓数据列表 -->
+    <view class="data-list">
+    <block wx:for="{{holdings}}" wx:key="fund_name">
+    <view class="data-item">
+      <view><text>基金名称: {{item.fund_name}}</text></view>
+      <view><text>持仓金额: {{item.amount}}</text></view>
+      <view><text>累计盈亏: {{item.profit_loss}}</text></view>
+    </view>
+    </block>
+    </view> 
+</view>
